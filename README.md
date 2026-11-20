@@ -73,6 +73,28 @@ Aplikasi mobile **Tanamin (Flutter)** terhubung langsung dengan situs web **Tana
 
 ---
 
+## 🔄 Endpoint (Flutter ↔ Django PWS)
+## Katalog Plant
+
+| Method | Endpoint | Deskripsi | Auth |
+|---|---|---|---|
+| GET | `/api/plants/` | List katalog tanaman | Tidak |
+| POST | `/api/plants/` | Tambah tanaman ke katalog | Ya |
+| GET | `/api/plants/<id>/` | Detail tanaman | Tidak |
+| PUT/PATCH | `/api/plants/<id>/` | Update tanaman | Ya |
+| DELETE | `/api/plants/<id>/` | Hapus tanaman | Ya |
+
+## Kebun User (GardenPlant)
+| Method | Endpoint | Deskripsi | Auth |
+|---|---|---|---|
+| GET | `/api/plants/garden/` | List tanaman milik user | Ya |
+| POST | `/api/plants/garden/` | Tambah tanaman ke kebun | Ya |
+| GET | `/api/plants/garden/<id>/` | Detail tanaman di kebun | Ya |
+| PUT/PATCH | `/api/plants/garden/<id>/` | Update tanaman di kebun | Ya |
+| DELETE | `/api/plants/garden/<id>/` | Hapus tanaman dari kebun | Ya |
+
+
+
 ## 🎨 Desain Antarmuka (Figma)
 
 Tautan desain UI/UX aplikasi mobile Tanamin dapat diakses melalui Figma berikut:
