@@ -93,21 +93,6 @@ Aplikasi mobile **Tanamin (Flutter)** terhubung langsung dengan situs web **Tana
 | PUT/PATCH | `/api/plants/garden/<id>/` | Update tanaman di kebun | Ya |
 | DELETE | `/api/plants/garden/<id>/` | Hapus tanaman dari kebun | Ya |
 
-## Autentikasi
-Method	Endpoint	Deskripsi	Auth
-POST	/api/auth/register/	Daftar akun baru	Tidak
-POST	/api/auth/login/	Masuk	Tidak
-POST	/api/auth/logout/	Keluar	Ya
-GET	/api/auth/me/	Profil user yang sedang login	Ya
-PATCH	/api/auth/me/	Edit profil dan foto (multipart)	Ya
-
-## Catatan & Jurnal (Notes)
-Method	Endpoint	Deskripsi	Auth
-GET	/api/notes/	Mengambil daftar catatan milik user yang sedang login	Ya
-POST	/api/notes/	Menambahkan catatan baru	Ya
-GET	/api/notes/<id>/	Mengambil detail satu catatan	Ya
-PUT/PATCH	/api/notes/<id>/	Memperbarui catatan	Ya
-DELETE	/api/notes/<id>/	Menghapus catatan	Ya
 
 ## Autentikasi
 
@@ -142,6 +127,7 @@ DELETE	/api/notes/<id>/	Menghapus catatan	Ya
 | DELETE | `/api/greentrack/<id>/` | Menghapus Green Track pengguna. | Ya |
 
 ## Repositori Terkait
-Website Django (Proyek Tengah Semester): PBP-KEL-11/proyek_uts
+Website Django (Proyek Tengah Semester): PBP-KEL-11/proyek_uas
 Deployment  : https://finna-aprilia-tanamin.pws.cs.ui.ac.id/
-
+Figma       : Coming Soon
+APK         : Coming Soon
