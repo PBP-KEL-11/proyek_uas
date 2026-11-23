@@ -73,7 +73,61 @@ Aplikasi mobile **Tanamin (Flutter)** terhubung langsung dengan situs web **Tana
 
 ---
 
-## 🎨 Desain Antarmuka (Figma)
+## 🔄 Endpoint (Flutter ↔ Django PWS)
+## Katalog Plant
 
-Tautan desain UI/UX aplikasi mobile Tanamin dapat diakses melalui Figma berikut:
-- 🔗 **[Desain Figma Tanamin Mobile]**
+| Method | Endpoint | Deskripsi | Auth |
+|---|---|---|---|
+| GET | `/api/plants/` | List katalog tanaman | Tidak |
+| POST | `/api/plants/` | Tambah tanaman ke katalog | Ya |
+| GET | `/api/plants/<id>/` | Detail tanaman | Tidak |
+| PUT/PATCH | `/api/plants/<id>/` | Update tanaman | Ya |
+| DELETE | `/api/plants/<id>/` | Hapus tanaman | Ya |
+
+## Kebun User (GardenPlant)
+| Method | Endpoint | Deskripsi | Auth |
+|---|---|---|---|
+| GET | `/api/plants/garden/` | List tanaman milik user | Ya |
+| POST | `/api/plants/garden/` | Tambah tanaman ke kebun | Ya |
+| GET | `/api/plants/garden/<id>/` | Detail tanaman di kebun | Ya |
+| PUT/PATCH | `/api/plants/garden/<id>/` | Update tanaman di kebun | Ya |
+| DELETE | `/api/plants/garden/<id>/` | Hapus tanaman dari kebun | Ya |
+
+
+## Autentikasi
+
+| Method | Endpoint | Deskripsi | Auth |
+|---|---|---|---|
+| POST | `/api/auth/register/` | Daftar akun baru | Tidak |
+| POST | `/api/auth/login/` | Masuk | Tidak |
+| POST | `/api/auth/logout/` | Keluar | Ya |
+| GET | `/api/auth/me/` | Profil user yang sedang login | Ya |
+| PATCH | `/api/auth/me/` | Edit profil dan foto (`multipart`) | Ya |
+
+## Catatan & Jurnal (Notes)
+
+| Method | Endpoint | Deskripsi | Auth |
+|---|---|---|---|
+| GET | `/api/notes/` | Mengambil daftar catatan milik user yang sedang login | Ya |
+| POST | `/api/notes/` | Menambahkan catatan baru | Ya |
+| GET | `/api/notes/<id>/` | Mengambil detail satu catatan | Ya |
+| PUT/PATCH | `/api/notes/<id>/` | Memperbarui catatan | Ya |
+| DELETE | `/api/notes/<id>/` | Menghapus catatan | Ya |
+
+## Jejak Hijau (Green Track)
+
+| Method | Endpoint | Deskripsi | Auth |
+|---|---|---|---|
+| GET | `/api/users/` | Mengambil daftar pengguna dan tanaman mereka (khusus admin). | Admin |
+| GET | `/api/users/<id>/` | Mengambil daftar tanaman-tanaman yang dimiliki pengguna beserta detail dari tanaman masing-masing. | Admin |
+| GET | `/api/greentrack/<id>/` | Mengambil detail akun gamifikasi pengguna berupa nama Green Track, deskripsi, level, pertumbuhan XP, dan badge. | Ya |
+| POST | `/api/greentrack/` | Menciptakan Green Track pengguna. | Ya |
+| GET | `/api/greentrack/` | Mengambil daftar pengguna yang sudah terdaftar dalam Green Track (khusus admin). | Admin |
+| PUT/PATCH | `/api/greentrack/<id>/` | Mengubah nama dan deskripsi Green Track pengguna. | Ya |
+| DELETE | `/api/greentrack/<id>/` | Menghapus Green Track pengguna. | Ya |
+
+## Repositori Terkait
+Website Django (Proyek Tengah Semester): PBP-KEL-11/proyek_uas
+Deployment  : https://finna-aprilia-tanamin.pws.cs.ui.ac.id/
+Figma       : Coming Soon
+APK         : Coming Soon
