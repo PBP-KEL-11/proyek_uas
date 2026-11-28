@@ -128,6 +128,9 @@ Aplikasi mobile **Tanamin (Flutter)** terhubung langsung dengan situs web **Tana
 
 ## Repositori Terkait
 Website Django (Proyek Tengah Semester): PBP-KEL-11/proyek_uas
+
 Deployment  : https://finna-aprilia-tanamin.pws.cs.ui.ac.id/
-Figma       : Coming Soon
+
+Figma       : https://www.figma.com/design/j82eWWQCxSITsLjcN6qlyx/Proyek-UAS-PBP---Kelas-E---Kelompok-11?node-id=0-1&p=f&t=ugmV3UEY3Ot3DrgW-0
+
 APK         : Coming Soon
